@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+#wrap {width: 1200px; margin: 0 auto;}
+
+#header {width: 100%; display: flex;}
+#header .logo {width: 20%; height: 100px;}
+#header .nav {width: 80%; height: 100px;}
+
+#slider {width: 100%; height: 300px;}
+
+#contents {width: 100%; display: flex;}
+#contents .content1 {width: 33.3333%; height: 200px;}
+#contents .content2 {width: 33.3333%; height: 200px;}
+#contents .content3 {width: 33.3333%; height: 200px;}
+
+#footer {width: 100%; display: flex;}
+#footer .logo {width: 20%; height: 100px;}
+#footer .footer {width: 80%; height: 100px;}
+#footer .footer .nav {height: 50%;}
+#footer .footer .copyright {height: 50%;}
