@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #000;}
+
+#wrap {width: 1200px; margin: 0 auto;}
+#wrap #header {width: 100%; display: flex;}
+#wrap #slider {width: 100%; height: 300px;}
+#wrap #contents {width: 100%; height: 200px; display: flex;}
+#wrap #footer {width: 100%; height: 100px; display: flex;}
+
+#header h1 {width: 20%; height: 100px;}
+#header nav {width: 80%; height: 100px; padding: 30px 40px; background-color: #d77373;}
+nav > ul {text-align: right;  display: flex; justify-content: right; height: 40px;}
+
+#contents .content1 {width: 33.3333%; height: 200px;}
+#contents .content2 {width: 33.3333%; height: 200px;}
+#contents .content3 {width: 33.3333%; height: 200px;}
+
+#footer .footer1 {width: 20%; height: 100px;}
+#footer .footer2 {width: 60%; height: 100px;}
+#footer .footer3 {width: 20%; height: 100px;}
