@@ -16,8 +16,7 @@ nav > ul {text-align: right;  display: flex; justify-content: right; height: 40p
 nav > ul > li {position: relative;}
 nav > ul > li > a {display: block; padding: 10px 40px; background-color: #a97070;}
 nav > ul > li > a:hover {background-color: #d9b8b8;} 
-nav > ul > li > ul {position: absolute; top: 38px; left: 0; 
-    background-color: #b7acac; width: 100%; box-sizing: border-box; display: none;} 
+nav > ul > li > ul {height: 0; overflow: hidden; transition: height 600ms; background-color: #ddd;} 
 nav > ul > li > ul > li > a {display: flex; padding: 10px;}
 nav > ul > li > ul > li > a:hover {background-color: #e39f9f;}
 

@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 메뉴 m-1 js</title>
+    <title>웹디자인기능사 메뉴 m-2 jq</title>
 
-    <link rel="stylesheet" href="./style-js.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="wrap">
         <header id="header">
             <h1></h1>
             <nav>
+                <!-- ul>li*4>a{메뉴$}+ul.submenu>li*4>a{서브메뉴$-$} -->
                 <ul>
                     <li>
-                        <a href="">메뉴1</a>
+                        <a href="#">메뉴1</a>
                         <ul class="submenu">
                             <li><a href="#">서브메뉴1-1</a></li>
                             <li><a href="#">서브메뉴1-2</a></li>
@@ -24,7 +25,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">메뉴2</a>
+                        <a href="#">메뉴2</a>
                         <ul class="submenu">
                             <li><a href="#">서브메뉴2-1</a></li>
                             <li><a href="#">서브메뉴2-2</a></li>
@@ -33,7 +34,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">메뉴3</a>
+                        <a href="#">메뉴3</a>
                         <ul class="submenu">
                             <li><a href="#">서브메뉴3-1</a></li>
                             <li><a href="#">서브메뉴3-2</a></li>
@@ -42,7 +43,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">메뉴4</a>
+                        <a href="#">메뉴4</a>
                         <ul class="submenu">
                             <li><a href="#">서브메뉴4-1</a></li>
                             <li><a href="#">서브메뉴4-2</a></li>
@@ -53,42 +54,33 @@
                 </ul>
             </nav>
         </header>
-        <section id="slider"></section>
-        <article id="contents">
+        <article id="slider"></article>
+        <section id="contents">
             <div class="content1"></div>
             <div class="content2"></div>
             <div class="content3"></div>
-        </article>
+        </section>
         <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
         </footer>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script>
-        // window.onload = function(){
+        $(document).ready(function(){
 
-        // };
-        // ㄴ 1번. 컨텐츠 모두 로드됐을때 띄우기
-        
-        // document.addEventListener("DOMContentLoaded",function(){
-
-        // });
-        // ㄴ 2번. dom tree가 로드되면 띄우기 (1,2번 둘중 하나 쓰기)
-
-        document.addEventListener("DOMContentLoaded",function(){
-            let navList = document.querySelectorAll("nav > ul > li");
-
-            navList.forEach(function(navItem){
-                navItem.addEventListener("mouseover", function(){
-                    this.querySelector(".submenu").style.height = "160px";
-                });
-                navItem.addEventListener("mouseout", function(){
-                    this.querySelector(".submenu").style.height = "0px";
-                });
-            });
         });
+
+        $(function(){
+            $("nav > ul > li").mouseenter(function(){
+                $("nav > ul > li > ul").stop().slideDown(200);
+            });
+            $("nav > ul > li").mouseleave(function(){
+                $("nav > ul > li > ul").stop().slideUp(200);
+            });
+        })
     </script>
+
 </body>
 </html>
