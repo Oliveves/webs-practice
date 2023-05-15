@@ -1,20 +1,22 @@
 @charset "UTF-8";
 
 * {padding: 0; margin: 0;}
-ul {list-style: none;}
+ul {list-style: none; padding: 0; margin: 0; }
 a {text-decoration: none; color: #000;}
 
-#wrap {width: 100%;}
+#wrap {width: 100%; display: flex; flex-wrap: wrap;}
 #wrap #aside {width: 200px; height: 850px;}
-#aside h1 {width: 100%; height: 20%;}
-#aside nav {width: 100%; height: 80%;}
-nav > ul > li > a {padding: 10px; display: block; text-align: center;}
-nav > ul > li > a:hover {background-color: #ddd;}
-nav > ul > li > ul {display: none;}
-nav > ul > li > ul > li > a {padding: 10px; display: block; text-align: center;}
-nav > ul > li > ul > li > a:hover {background-color: #ddd;}
+#aside h1 {width: 100%; height: 100px;}
+#aside nav {width: 100%; height: 750px;}
 
-#wrap #main {width: calc(100% - 200px); width: 850px;}
+nav > ul > li {position: relative;}
+nav > ul > li > a {padding: 10px; display: block; text-align: center;}
+/* ㄴ 인라인 구조는 글씨로 인식하기 때문에 사이즈를 정해줄 수가 없음 하고 싶으면 블록으로 변경해야 */
+nav > ul > li > ul {width: 200px; position: absolute; right: -200px; top: 0; display: none;}
+nav > ul > li > ul > li > a {padding: 10px; display: block;}
+
+
+#wrap #main {width: calc(100% - 200px); height: 850px;}
 #main #slider {width: 100%; height: 400px; position: relative;}
 #main #slider .links {width: 100px; height: 300px; position: absolute; top: 0; right: 0;}
 #main #banner {width: 100%; height: 200px;}
