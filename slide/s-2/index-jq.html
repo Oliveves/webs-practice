@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-02-jquery</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+        img { border: none; }
+
+        .sliderWrap { width: 1200px; height: 300px; overflow: hidden; margin: 0 auto; position:}
+        .sliderWrap .slider { position: absolute; left: 0; top: 0; }
+        .sliderWrap .slider img { display: block; }
+
+    </style>
+
+</head>
+<body>
+    <article id="slider">
+        <div class="sliderWrap">
+            <div class="slider"><img src="./images/slide01.jpg" alt="슬라이드 이미지1"></div>
+            <div class="slider"><img src="./images/slide02.jpg" alt="슬라이드 이미지2"></div>
+            <div class="slider"><img src="./images/slide03.jpg" alt="슬라이드 이미지3"></div>
+        </div>
+    </article>
+
+    <script src="./script/jquery-3.7.0.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            $(".slider").hide().first().show(); // 첫 번째 슬라이드 이미지만 보이도록 설정
+
+            let sliderWidth = $('.sliderWrap').width();
+            let sliderCount = $('.slider').length;
+            let currentIndex = 1;
+
+            setInterval(function() {
+                let nextIndex = (currentIndex + 1) % (sliderCount + 1);
+                if (nextIndex === 0) nextIndex = 1;
+
+                $('.sliderWrap').animate({ 'left': -nextIndex * sliderWidth }, 800);
+
+                currentIndex = nextIndex;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
