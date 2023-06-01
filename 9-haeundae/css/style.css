@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul, li {list-style: none; padding: 0; margin: 0;}
+a {text-decoration: none; color: inherit;}
+h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
+
+body{background: #ffffff; color: #222328;}
+
+#wrap {width: 1000px; height: 650px; display: flex; border-bottom: 1px solid #ddd;}
+#wrap #aside {width: 200px; height: 650px; }
+#wrap #aside h1 {width: 200px; height: 100px; display: flex; justify-content: center; align-items: center;}
+#wrap #aside h1 a {width: 200px; height: 40px;}
+
+#wrap #aside nav {width: 200px; height: 550px; background: #6BACD9;}
+#wrap #aside nav > ul > li > a {display: block; font-size: 16px; height: 50px; line-height: 50px; 
+    padding: 5px 20px 0; color: #ffffff; border-bottom: 1px solid #a4cad6;}
+#wrap #aside nav > ul > li > a:hover {background: #6BACD9; }
+#wrap #aside nav > ul > li > ul {height: auto;}
+#wrap #aside nav > ul > li > ul > li > a {display: block; height: 40px; line-height: 40px; padding: 5px 20px 0; color: #6BACD9; background: #ffffff; border-bottom: 1px solid rgba(0,0,0,0.);}
+#wrap #aside nav > ul > li > ul > li > a:hover { opacity: 0.7;}
+
+#wrap #main {width: 800px; height: 650px;}
+
+/* 슬라이드 */
+#wrap #main #slider {width: 100%; height: 350px; position: relative;}
+#wrap #main #slider .slideList {width: 100%;}
+#wrap #main #slider .slideList .slideImg img {display: block; width: 100%; 
+    height: 350px; position: absolute;}
+
+/* 콘텐츠 */
+#wrap #main #contents {width: 100%; background: #ce6e6e; display: flex;}
+#wrap #main #contents .noticeGallery {width: 33.3333%; height: 200px;}
+
+#wrap #main #contents .noticeGallery .tabMenu .tabBtn {display: flex;}
+#wrap #main #contents .noticeGallery .tabMenu .tabConts .notice {font-size: 14px; padding: 5px;}
+#wrap #main #contents .noticeGallery .tabMenu .tabConts .notice li > span {float: right;}
+
+#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery {display: flex; justify-content: space-evenly;}
+#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery img {display: block; width: 80px; height: 150px; margin-right: 10px;}
+
+
+#wrap #main #contents .banner {width: 33.3333%; height: 200px; background: #e09292;}
+#wrap #main #contents .links {width: 33.3333%; height: 200px; background: #c27979;}
+
+#wrap #main #footer {width: 100%; height: 100px; display: flex;}
+#wrap #main #footer .blogo {width: 200px; height: 100px; display: flex; justify-content: center; align-items: center;}
+#wrap #main #footer .blogo a {width: 200px; height: 40px;}
+#wrap #main #footer .footerRight {width: 600px; height: 100px; background: #c25858;}
