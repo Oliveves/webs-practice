@@ -26,19 +26,20 @@ body{background: #ffffff; color: #222328;}
 #wrap #main #slider {width: 100%; height: 350px; position: relative;}
 #wrap #main #slider .slideList {width: 100%;}
 #wrap #main #slider .slideList .slideImg img {display: block; width: 100%; 
-    height: 350px; position: absolute;}
+    height: 350px; position: absolute; }
 
 /* 콘텐츠 */
 #wrap #main #contents {width: 100%; background: #ce6e6e; display: flex;}
 #wrap #main #contents .noticeGallery {width: 33.3333%; height: 200px;}
 
-#wrap #main #contents .noticeGallery .tabMenu .tabBtn {display: flex;}
+#wrap #main #contents .noticeGallery .tabMenu .tabBtn > ul {display: flex; }
+#wrap #main #contents .noticeGallery .tabMenu .tabBtn > ul > li {margin: 10px 10px 0 10px ;}
 #wrap #main #contents .noticeGallery .tabMenu .tabConts .notice {font-size: 14px; padding: 5px;}
 #wrap #main #contents .noticeGallery .tabMenu .tabConts .notice li > span {float: right;}
 
 #wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery {display: flex; justify-content: space-evenly;}
 #wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery img {display: block; width: 80px; height: 150px; margin-right: 10px;}
-
+#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery 
 
 #wrap #main #contents .banner {width: 33.3333%; height: 200px; background: #e09292;}
 #wrap #main #contents .links {width: 33.3333%; height: 200px; background: #c27979;}
