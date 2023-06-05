@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
 
 body{background: #ffffff; color: #222328;}
 
-#wrap {width: 1000px; height: 650px; display: flex; border-bottom: 1px solid #ddd;}
+#wrap {width: 1000px; height: 650px; position: relative; display: flex; border-bottom: 1px solid #ddd;}
 #wrap #aside {width: 200px; height: 650px; }
 #wrap #aside h1 {width: 200px; height: 100px; display: flex; justify-content: center; align-items: center;}
 #wrap #aside h1 a {width: 200px; height: 40px;}
@@ -29,22 +29,33 @@ body{background: #ffffff; color: #222328;}
     height: 350px; position: absolute; }
 
 /* 콘텐츠 */
-#wrap #main #contents {width: 100%; background: #ce6e6e; display: flex;}
-#wrap #main #contents .noticeGallery {width: 33.3333%; height: 200px;}
+#wrap #main #contents {width: 100%; background: #fff; display: flex; border-bottom: 1px solid #ddd;}
+#wrap #main #contents .noticeGallery {width: 33.3333%; height: 200px; display: flex; position: relative; padding: 15px 0 0 10px; box-sizing: border-box;}
+#wrap #main #contents .noticeGallery h2 {height: 15px; line-height: 15px; font-size: 14px;
+    color: #fff; background: #6BACD9; padding: 5px 10px; margin-right: 5px; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+#wrap #main #contents .noticeGallery h2.on {background: #355972;}
+#wrap #main #contents .noticeGallery ul {position: absolute; top: 45px; font-size: 13px;}
+#wrap #main #contents .noticeGallery ul.notice li {padding-top: 5px; padding-bottom: 5px; border-bottom: 1px solid #ddd;}
+#wrap #main #contents .noticeGallery ul.notice li:last-child {border-bottom: 0;}
+#wrap #main #contents .noticeGallery ul.notice li span {float: right; padding-left: 20px;}
 
-#wrap #main #contents .noticeGallery .tabMenu .tabBtn > ul {display: flex; }
-#wrap #main #contents .noticeGallery .tabMenu .tabBtn > ul > li {margin: 10px 10px 0 10px ;}
-#wrap #main #contents .noticeGallery .tabMenu .tabConts .notice {font-size: 14px; padding: 5px;}
-#wrap #main #contents .noticeGallery .tabMenu .tabConts .notice li > span {float: right;}
+#wrap #main #contents .noticeGallery ul.gallery {display: flex; margin-top: 5px;}
+#wrap #main #contents .noticeGallery ul.gallery img {background-size: contain; width: 75px; height: 130px; margin-right: 10px;}
+#wrap #main #contents .noticeGallery ul.gallery img:hover {opacity: 0.7;}
 
-#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery {display: flex; justify-content: space-evenly;}
-#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery img {display: block; width: 80px; height: 150px; margin-right: 10px;}
-#wrap #main #contents .noticeGallery .tabMenu .tabConts .gallery 
-
-#wrap #main #contents .banner {width: 33.3333%; height: 200px; background: #e09292;}
-#wrap #main #contents .links {width: 33.3333%; height: 200px; background: #c27979;}
+#wrap #main #contents .banner {width: 33.3333%; height: 200px; position: relative; background: url("../images/1574396636975.jpg")no-repeat center/cover}
+#wrap #main #contents .banner span {position: absolute; color: #fff; bottom: 25px; right: 25px; font-weight: bold; text-align: right; letter-spacing: -1px;}
+#wrap #main #contents .links {width: 33.3333%; height: 200px; position: relative; background:url("../images/1574396635645.jpg")no-repeat center/cover}
+#wrap #main #contents .links span {position: absolute; color: #fff; top: 20px; right: 25px; font-weight: bold; text-align: right; letter-spacing: -1px;}
 
 #wrap #main #footer {width: 100%; height: 100px; display: flex;}
-#wrap #main #footer .blogo {width: 200px; height: 100px; display: flex; justify-content: center; align-items: center;}
+#wrap #main #footer .blogo {width: 200px; height: 100px; display: flex; justify-content: center; align-items: center; border-right: 1px solid #ddd;}
 #wrap #main #footer .blogo a {width: 200px; height: 40px;}
-#wrap #main #footer .footerRight {width: 600px; height: 100px; background: #c25858;}
+#wrap #main #footer .footerRight {width: 600px; height: 100px; border-right: 1px solid #ddd;}
+#wrap #main #footer .footerRight .bmenu {width: 100%; height: 50px; border-bottom: 1px solid #ddd; }
+#wrap #main #footer .footerRight .bmenu ul {height: 50px; display: flex; justify-content: space-around;  align-items: center; font-size: 14px;}
+#wrap #main #footer .footerRight .copyright {width: 100%; height: 50px; display: flex; justify-content: center; padding-top: 15px; box-sizing: border-box; font-size: 13px; background: #6BACD9; color: #fff;}
+
+#pop {width: 600px; height: 350px; background: url("../images/pop.jpg")no-repeat; z-index: 999; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 5px 0px #666;}
+#pop .close a {display: block; color: #fff; font-weight: bold; font-size: 14px; position: absolute; right: 20px; bottom: 25px; padding: 7px 10px; background: #355972; border-radius: 5px;}
+#pop .close a:hover {background: #000;}
