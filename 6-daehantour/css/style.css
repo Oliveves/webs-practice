@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul, li {margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none; color: inherit;}
+h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
+
+body {color: #333333;}
+
+#wrap {width: 1200px; margin: 0 auto; position: relative;}
+#wrap header {width: 100%; height: 100px; display: flex;}
+#wrap header h1.logo {width: 200px; height: 100px; display: flex; 
+    justify-content: center; align-items: center;}
+#wrap header h1.logo a {width: 200px; height: 40px;}
+
+#wrap header nav.menu {width: 1000px; height: 100px; background: #00c73c; position: relative; }
+#wrap header nav.menu .background {width: 1200px; height: 200px; background: #737373; 
+    z-index: 2; position: absolute; top: 100px; left: -200px;}
+
+#wrap header nav > ul {width: 80%; display: flex; right: 0; top: 60px; position: absolute; justify-content: right;}
+#wrap header nav > ul > li {width: 25%; height: 40px; text-align: center;}
+#wrap header nav > ul > li > a {display: block; background: #6ad28b; color: #737373; height: 40px; line-height: 40px; font-size: 14px; font-weight: bold;}
+#wrap header nav > ul > li > ul {width: 25%; height: 160px; position: absolute; z-index: 3;}
+#wrap header nav > ul > li > ul > li > a {display: block; height: 40px; line-height: 40px; font-size: 14px; color: #fff;}
+#wrap header nav > ul > li > ul > li > a:hover {background: #00c73c;}
+
+#wrap #slider {width: 100%; height: 300px; overflow: hidden;}
+#wrap #slider .slideList .slideImg img {display: block;}
+
+#wrap #contents {width: 100%; height: 200px; display: flex;}
+#wrap #contents h2 {font-size: 15px; margin: 10px; font-weight: bold;}
+#wrap #contents .notice {width: 33.3333%; border-left: 1px solid #ddd;}
+#wrap #contents .notice ul { padding: 0 10px;}
+#wrap #contents .notice li {font-size: 13px; padding: 5px 0; border-bottom: 1px dotted #ddd;}
+#wrap #contents .notice li span {float: right;}
+
+#wrap #contents .gallery {width: 33.3333%; background: #ddd;}
+#wrap #contents .gallery > ul {display: flex; justify-content: space-evenly; margin: 10px;}
+#wrap #contents .gallery > ul > li > a > img {width: 110px; height: 140px; background-size: contain;}
+
+#wrap #contents .links {width: 33.3333%; color: #fff; background: url("../images/2020042310275791998_158.jpg")no-repeat top/cover; border-right: 1px solid #ddd;}
+#wrap #contents .links a {margin: 10px; }
