@@ -35,7 +35,7 @@ $(window).on("load", function(){
     $(".layerPopup").on("click", function(){
         $("#pop").fadeIn();
     })
-    $(".close").on("click", function(){
+    $(".close > a").on("click", function(){
         $("#pop").fadeOut();
     })
 
