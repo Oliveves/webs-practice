@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul, li {margin: 0; padding: 0; list-style: none;}
+a {text-decoration: none; color: inherit;}
+h1,h2,h3 {margin: 0; padding: 0;}
+
+/* 주조색 #3cb149
+
+#1d8844
+#434748
+
+#ffffff
+#333333 */
+
+body {color: #333333; background: #ffffff;}
+#wrap {width: 1200px; margin: 0 auto; position: relative;}
+#wrap header {width: 100%; height: 100px; display: flex;}
+#wrap header h1.logo {width: 200px; }
+#wrap header nav.menu {width: 1000px; position: relative;}
+#wrap header nav.menu > ul {width: 80%; height: 50px; line-height: 50px; background: #3cb149; color: #ffffff; position: absolute; right: 0; bottom: 0;}
+#wrap header nav.menu > .background {width: 100%; height: 150px; position: absolute; top: 100px; background: #000;}
+
+#wrap #slider {width: 100%; height: 300px; overflow: hidden;}
+#wrap #slider .slideList {display: flex;}
+#wrap #slider .slideList .slideImg img {display: block;}
+
+#wrap #contents {width: 100%; height: 200px; display: flex;}
+#wrap #contents h2 {font-size: 15px;}
+
+#wrap #contents .notice {width: 33.333%;}
+#wrap #contents .gallery {width: 33.333%;}
+#wrap #contents .banner {width: 33.333%;}
+
+#wrap footer {width: 100%; height: 100px; display: flex;}
+#wrap footer .blogo {width: 200px;}
+#wrap footer .copyright {width: 800px; background: #3cb149; color: #ffffff;}
+#wrap footer .fmsite {width: 200px;}
+
+#wrap #pop {width: 600px; height: 450px; background: url(); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#wrap #pop .close {right: 0; bottom: 0; background: #000; color: #ffffff;}
