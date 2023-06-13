@@ -24,11 +24,11 @@ $(window).on("load", function(){
 
 
     //탭메뉴
-
     $("ul.gallery").hide();
 
+
     $("h2").on("click", function(){
-        $(this).addClass("on").sibling("h2").removeClass("on");
+        $(this).addClass("on").siblings("h2").removeClass("on");
         $(".noticeGallery ul").hide(); $(".on+ul").show();
     });
 
