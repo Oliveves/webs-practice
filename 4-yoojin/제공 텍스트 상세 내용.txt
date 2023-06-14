@@ -1,7 +1,38 @@
-﻿
+﻿#ff5050
+#ffc000, #5b9bd5
+#f2f2f2
+#333333
 
 
-<슬라이딩> 
+회사소개
+인사말
+조직구성도
+오시는길
+
+사업영역
+전원주택
+도시재생
+인테리어
+
+입주정보
+입주단지
+입주캘린더
+
+고객센터
+공지사항
+건축상담
+홍보자료실
+<풀메뉴>
+
+#wrap>header+#slider+#contents+footer
+h1.logo+nav.menu
+.slideList>.slideImg*3>a>img
+.notice+.gallery+.links
+.footerInner+.fmsite
+
+
+
+<페이드 슬라이딩> 
 아름다운 도시 속 낭만, 유진건설
 2021 세계 건축 박람회, 우수상 획득
 Design Archtecture, Yujin!
