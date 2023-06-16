@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul,li {margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none; color: inherit;}
+h1,h2,h3 {margin: 0; padding: 0;}
+
+#wrap {width: 100%; height: 970px; position: relative;}
+#wrap main {width: 100%; height: 850px; display: flex;}
+#wrap main header {width: 200px;}
+#wrap main header h1.logo {width: 200px; height: 100px; background: #ddd; display: flex; justify-content: center; align-items: center;}
+#wrap main header h1.logo a {display: block; width: 200px; height: 40px; }
+#wrap main header nav.menu {width: 200px; height: 750px; background: #c0e5ec;}
+#wrap main header nav.menu ul > li {position: relative; border-bottom: 1px dotted #2e55aa;}
+#wrap main header nav.menu ul > li:hover {background: #2e55aa; color: #fff;}
+
+#wrap main header nav.menu ul > li > ul {
+    width: calc(100% - 150px); position: absolute; 
+    height: 200px; display: flex;
+    left: 190px; top: 0px;
+    z-index: 3; color: #fff;}
+    #wrap main header nav.menu ul > li > ul li:hover {background: #000;}
+#wrap main header nav.menu ul > li > ul > li {display: block; padding-bottom: 20px; height: 30px; line-height: 30px; border-bottom: 0;}
+#wrap main header nav.menu .background {
+    width: calc(100% - 150px); height: 200px; position: absolute; top: 100px; left: 190px; z-index: 2; background: rgba(0,0,0,.3);}
+#wrap main header nav.menu li a {display: block; height: 50px; line-height: 50px; width: 200px; padding-left: 15px;}
+
+#wrap main #contents {width: calc(100% - 200px); height: 750px;}
+#wrap main #contents #slider {width: 100%; height: 400px; overflow: hidden; position: relative;}
+#wrap main #contents #slider .slideList .slideImg {width: 100%; position: absolute; left: 0; top: 0;}
+#wrap main #contents #slider .slideList .slideImg a img {width: 100%; height: 400px; display: block;}
+#wrap main #contents #slider .links {position: absolute; top: 20px; right: 20px;}
+#wrap main #contents #slider .links li {margin-bottom: 10px;}
+#wrap main #contents #slider .links a {display: block; width: 50px; height: 50px; background: #ffffff; border-radius: 50%; padding: 10px;}
+#wrap main #contents #slider .links a:hover {opacity: 0.7;}
+#wrap main #contents #slider .links a img {width: 50px; height: 50px; }
+
+#wrap main #contents .banner {width: 100%; height: 200px; position: relative; background: #2e55aa; padding: 20px; box-sizing: border-box;}
+#wrap main #contents .banner a {display: flex;}
+#wrap main #contents .banner img {width: 150px; height: 150px; border-radius: 50%;}
+#wrap main #contents .banner p {color: #fff; margin: auto 0; margin-left: 20px;}
+#wrap main #contents .banner .arrow {position: absolute; right: 0;}
+
+#wrap main #contents .noticeGallery {width: 100%; height: 250px; display: flex; position: relative;}
+#wrap main #contents .noticeGallery h2 {background: #666; color: #fff; font-size: 20px; margin: 10px 0 10px 10px; 
+    padding: 5px; height: 30px; line-height: 30px; border-top-left-radius: 10px; border-top-right-radius: 10px;
+}
+#wrap main #contents .noticeGallery h2.on {background: #2e55aa;}
+#wrap main #contents .noticeGallery ul {width: 97%; position: absolute; top: 70px;}
+#wrap main #contents .noticeGallery ul.notice {padding-left: 20px;}
+#wrap main #contents .noticeGallery ul.notice li {height: 30px; line-height: 30px; border-bottom: 1px solid #ddd;}
+#wrap main #contents .noticeGallery ul.notice li a:hover {opacity: 0.7;}
+#wrap main #contents .noticeGallery ul.notice span {float: right;}
+#wrap main #contents .noticeGallery ul.gallery {display: flex; justify-content: space-evenly;}
+#wrap main #contents .noticeGallery ul.gallery li {width: 30%;}
+#wrap main #contents .noticeGallery ul.gallery img {width: 100%; height: 150px; background-size: contain;}
+
+#wrap footer {width: 100%; height: 120px; display: flex; background: #000;}
+#wrap footer .blogo {width: 200px; display: flex; justify-content: center; align-items: center;}
+#wrap footer .footerInner {width: calc(100% - 200px);}
+#wrap footer .footerInner .bmenu {width: 100%; height: 60px; background: #666; color: #fff;}
+#wrap footer .footerInner .bmenu ul {display: flex; justify-content: center; align-items: center;}
+#wrap footer .footerInner .bmenu ul li {margin: 15px 50px;height: 30px; line-height: 30px;}
+#wrap footer .footerInner .copyright {width: 100%; height: 60px; background: #2e55aa; color: #fff; display: flex; justify-content: center; align-items: center;}
+
+#wrap #pop {width: 450px; height: 330px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url("../images/pop.jpg")no-repeat; z-index: 9;}
+.close a {position: absolute; bottom: 20px; right: 15px; background: #ffffff; padding: 5px 10px; border-radius: 10px; }
