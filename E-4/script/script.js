@@ -3,20 +3,18 @@ $(window).on("load", function(){
     $(".submenu").hide();
 
     $("nav > ul > li").hover(function(){
-        $(this).find($("ul")).stop().slideDown(500);
+        $(this).find($(".submenu")).stop().fadeIn();
     }, function(){
-        $(this).find($("ul")).stop().slideUp(500);
-    });
+        $(this).find($(".submenu")).stop().fadeOut();
+    })
 
-
-    //반응형 - 좌우슬라이드
-
+    //좌우슬라이드
     let currentIndex = 0;
 
     $(".slideList").append($(".slideImg").first().clone(true));
-    
+
     setInterval(function(){
-        currentIndex ++;
+        currentIndex++;
         $(".slideList").animate({marginLeft : -currentIndex * $(".slideList").width()}, 600);
 
         if(currentIndex == 3){
@@ -29,14 +27,10 @@ $(window).on("load", function(){
 
     //팝업
     $("#pop").hide();
-
-    $(".notice ul li a").first().addClass("layerPopup");
-    $(".layerPopup").on("click", function(){
+    $(".notice > ul > li").first().on("click", function(){
         $("#pop").fadeIn();
     })
-    $(".close").on("click", function(){
+    $(".close").first().on("click", function(){
         $("#pop").fadeOut();
     })
-
-
-})
+});

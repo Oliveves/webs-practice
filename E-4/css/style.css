@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul,li {margin: 0; padding: 0; list-style: none;}
+a {text-decoration: none; color: inherit;}
+h1,h2,h3 {margin: 0; padding: 0;}
+
+/* 개별메뉴, 좌우슬라이드 */
+
+body {background: #ffffff;}
+
+#wrap {width: 100%; height: 100vh;}
+#wrap main {width: 100%; height: calc(100% - 120px); display: flex;}
+#wrap main header {width: 200px; background: #B4E1FF;}
+#wrap main header nav > ul > li {position: relative; background: #4e58c9; height: 50px; line-height: 50px; text-align: center;}
+#wrap main header nav > ul > li > ul {position: absolute; left: 200px; width: 200px; top: 0; background: #806bd6;}
+
+
+#wrap main #contents {width: 400px; background: #D5F0E3;}
+#wrap main #slider {width: calc(100% - 600px); height: 100%; overflow: hidden;}
+#wrap main #slider .slideList {display: flex; width: 100%;}
+#wrap main #slider .slideList .slideImg {flex: 1 0 100%;}
+#wrap main #slider .slideList .slideImg a img {display: block; width: 100%; height: 100%; object-fit: cover;}
+
+#wrap footer {width: 100%; height: 120px; display: flex;}
+#wrap footer .blogo {width: 200px;}
+#wrap footer .footerInner {width: calc(100% - 600px);}
+#wrap footer .footerInner .bmenu {height: 60px; background: #dddddd;}
+#wrap footer .footerInner .bmenu ul {display: flex;}
+#wrap footer .footerInner .copyright {height: 60px;}
+#wrap footer .fmsite {width: 400px; background: #F5FFC6;}
+
+#pop {width: 450px; height: 330px; background: url(../images/pop.jpg)no-repeat center/cover; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9;}
+#pop .close a {position: absolute; bottom: 0; right: 0; background: #ffffff; padding: 5px 10px;}
