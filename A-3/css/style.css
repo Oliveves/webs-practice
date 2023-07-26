@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+a:hover {opacity: 0.7;}
+ul, li {margin: 0; padding: 0; list-style: none;}
+h1, h2, h3 {margin: 0; padding: 0;}
+
+/* ===============
+주조색(임의) :  #1B52C1
+배경색 : #ffffff
+텍스트색 : #333333
+
+개별 메뉴
+페이드슬라이드
+================= */
+
+body {background: #fff; color: #333;}
+
+#wrap {width: 1200px; height: 700px; margin: 0 auto; position: relative;}
+#header {width: 100%; height: 100px; display: flex;}
+#slider {width: 100%; height: 300px; position: relative;}
+#contents {width: 100%; height: 200px; display: flex;}
+#footer {width: 100%; height: 100px; display: flex; border-bottom: 1px solid #ddd; box-sizing: border-box;}
+
+/* header  =============================================*/
+/* 로고 */
+#header h1.logo {width: 200px; display: flex; justify-content: center; align-items: center; 
+    border-left: 1px solid #ddd; box-sizing: border-box;}
+
+/* 개별메뉴 */
+#header nav {width: 1000px; position: relative; background: #ddd; z-index: 2;}
+#header nav > ul {width: 800px; height: 50px; position: absolute; 
+    top: 25px; right: 0; display: flex; background: #1B52C1; color: #fff;}
+#header nav a {display: flex; justify-content: center; align-items: center;}
+#header nav > ul > li > a {width: 200px; height: 100%; }
+#header nav > ul > li > ul > li > a {width: 100%; height: 40px; background: #1B52C1;}
+#header nav > ul > li:hover > a , #header nav > ul > li > ul > li:hover > a {background: #000; opacity: 1; }
+
+/* Slider  =============================================*/
+#slider .slideList .slideImg {position: absolute; top: 0; left: 0;}
+
+/* Contents  ===========================================*/
+/* 공지사항과갤러리 탭메뉴 */
+#contents  div {width: 33.33%; height: 100%;}
+#contents  .noticeGallery {display: flex; position: relative; background: #eee; padding-left: 10px;}
+#contents  .noticeGallery  h2 {margin-top: 15px; font-size: 16px;}
+#contents  .noticeGallery  h2 a {padding: 5px; background: #1B52C1; color: #fff; 
+    border-top-left-radius: 5px; border-top-right-radius: 5px;}
+    #contents  .noticeGallery  h2.on a {opacity: 1; background: #000;}
+#contents  .noticeGallery  ul {position: absolute; top: 55px;}
+
+#contents  .noticeGallery  ul.notice li {height: 25px; border-bottom: 1px dashed #666;}
+#contents  .noticeGallery  ul.notice li span {float: right; padding-left: 90px;}
+
+#contents  .noticeGallery ul.gallery {display: flex; gap: 10px;}
+#contents  .noticeGallery ul.gallery li {width: 120px; height: 130px; overflow: hidden;}
+
+/* 배너 */
+#contents .banner { overflow: hidden; position: relative;}
+#contents .banner img {width: 100%; height: 100%;}
+#contents .banner span {position: absolute; top: 20px; left: 20px; font-weight: bold; color: #fff;}
+
+/* 바로가기 */
+#contents .links { overflow: hidden; position: relative;}
+#contents .links img {width: 100%; height: 100%;}
+#contents .links span {position: absolute; top: 20px; left: 20px; font-weight: bold; color: #fff;}
+
+/* Footer  ===========================================*/
+#footer .blogo {width: 200px; height: 100%; display: flex; justify-content: center; align-items: center;
+    border-left: 1px solid #ddd; box-sizing: border-box;}
+#footer .footerInner {width: 1000px;}
+#footer .footerInner .bmenu ul {height: 50px; background: #1B52C1; color: #fff; display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px;}
+#footer .footerInner .copyright {height: 50px; background: #ddd; display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px;}
+
+#pop  {width: 450px; height: 330px; background: url("../images/pop.png"); 
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
