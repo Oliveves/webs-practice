@@ -33,4 +33,14 @@ $(window).on("load", function () {
 
     // 팝업 ===============================================
     $("#pop").hide();
+
+    $("ul.notice li").first().addClass("layerPopup");
+
+    $(".layerPopup").on("click", function () {
+        $("#pop").show();
+    });
+    $(".close").on("click", function () {
+        $("#pop").hide();
+    })
+
 })

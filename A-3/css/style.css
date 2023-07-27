@@ -73,5 +73,8 @@ body {background: #fff; color: #333;}
 #footer .footerInner .bmenu ul {height: 50px; background: #1B52C1; color: #fff; display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px;}
 #footer .footerInner .copyright {height: 50px; background: #ddd; display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px;}
 
+/* Popup  ===========================================*/
 #pop  {width: 450px; height: 330px; background: url("../images/pop.png"); 
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#pop .close {position: absolute; bottom: 15px; right: 10px; color: #fff; padding: 5px 10px; background: #000; border-radius: 5px;}
+#pop .popInner {position: absolute; top: 30px; left: 30px; color: #fff; font-size: 20px;}
