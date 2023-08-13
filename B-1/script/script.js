@@ -14,9 +14,16 @@ $(window).on("load", function(){
 
     setInterval(function(){
         currentIndex++;
-        $(".slideList").animate()
-    })
+        $(".slideList").animate({marginLeft : -currentIndex * 100 + "%"}, 600);
 
+        if(currentIndex == 3){
+            setTimeout(function(){
+                $(".slideList").animate({marginLeft : 0}, 0);
+                currentIndex = 0;
+            }, 700)
+        }
+    }, 3000)
 
+    // 탭메뉴 ==============================
 
 });
