@@ -25,5 +25,21 @@ $(window).on("load", function(){
     }, 3000)
 
     // 탭메뉴 ==============================
+    $("ul.gallery").hide();
 
+    $("h2").on("click", function(){
+        $(this).addClass("on").siblings("h2").removeClass("on");
+        $(".noticeGallery ul").hide(); $("h2.on+ul").show();
+    });
+
+    // 팝업 ==============================
+    $("#pop").hide();
+
+    $("ul.notice").first().addClass("layerPopup");
+    $(".layerPopup").on("click", function(){
+        $("#pop").fadeIn(300);
+    })
+    $(".close").on("click", function(){
+        $("#pop").fadeOut(300);
+    })
 });
