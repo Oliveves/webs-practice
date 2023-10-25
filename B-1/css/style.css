@@ -25,3 +25,4 @@ h1, h2, h3 {margin: 0; padding: 0;}
 #header h1.logo {width: 200px; height: 100%; display: flex; justify-content: center; align-items: center;}
 #header nav {width: 1000px; background: #ddd;}
 #header nav > ul {width: 80%; height: 50px; display: flex;  background: #5C9CFF; float: right;}
+#header nav > ul > li {width: 20%; height: 50px;}
